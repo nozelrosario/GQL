@@ -93,7 +93,7 @@ function viewQuery(db, query, options) {
       }
 
       function handleDelimitedCharacters() {
-        var normalizedString = currentString.toLowerCase();
+        var normalizedString = currentString; //.toLowerCase();
         if (normalizedString !== "") {
           //full-word operators, e.g. not, where
           if (isFullWordOperator(normalizedString)) {
